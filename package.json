@@ -1,0 +1,74 @@
+{
+	"name": "typescript-library-starter",
+	"version": "0.1.0",
+	"description": "",
+	"main": "lib/main",
+	"types": "@types/main",
+	"scripts": {
+		"test": "jest",
+		"dev": "npm run clean && (tsc -w | webpack -w  --progress --color)",
+		"build": "npm run clean && tsc && webpack -p --config=webpack.min.config.js --progress --color && webpack --progress --color && exit 0",
+		"clean": "rm -rf ./lib/* ./dist/* ./@types/* && exit 0",
+		"clean-node": "rm -rf ./node_modules && exit 0",
+		"deploy": "git add . && git commit -a -m \"release\" && git clean -f && release-it &&  exit 0"
+	},
+	"babel": {
+		"presets": [
+			"env"
+		]
+	},
+	"jest": {
+		"transform": {
+			"^.+\\.tsx?$": "ts-jest",
+			"^.+\\.jsx?$": "babel-jest"
+		},
+		"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"jsx",
+			"json",
+			"node"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dan2dev/typescript-library-starter.git"
+	},
+	"author": {
+		"name": "Dan C Castro"
+	},
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/dan2dev/typescript-library-starter/issues"
+	},
+	"homepage": "https://github.com/dan2dev/typescript-library-starter#readme",
+	"devDependencies": {
+		"@types/jest": "^22.0.1",
+		"@types/jquery": "^3.2.18",
+		"@types/jsx-chai": "^3.0.16",
+		"@types/lodash": "^4.14.93",
+		"@types/node": "^9.3.0",
+		"@types/react": "^16.0.34",
+		"@types/react-dom": "^16.0.3",
+		"@types/window-or-global": "^1.0.0",
+		"awesome-typescript-loader": "^3.4.1",
+		"babel-cli": "^6.26.0",
+		"babel-core": "^6.26.0",
+		"babel-jest": "^22.1.0",
+		"babel-preset-env": "^1.6.1",
+		"extract-text-webpack-plugin": "^3.0.2",
+		"html-webpack-plugin": "^2.30.1",
+		"jest": "^22.1.4",
+		"regenerator-runtime": "^0.11.1",
+		"source-map-loader": "^0.2.3",
+		"ts-jest": "^22.0.1",
+		"typescript": "^2.6.2",
+		"uglifyjs-webpack-plugin": "^1.1.6",
+		"webpack": "^3.10.0",
+		"webpack-livereload-plugin": "^1.0.0"
+	},
+	"dependencies": {
+	}
+}
