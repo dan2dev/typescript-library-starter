@@ -69,6 +69,5 @@
 		"webpack": "^3.10.0",
 		"webpack-livereload-plugin": "^1.0.0"
 	},
-	"dependencies": {
-	}
+	"dependencies": {}
 }
