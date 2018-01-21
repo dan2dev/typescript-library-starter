@@ -83,7 +83,7 @@ module.exports = {
 							importLoaders: 2
 						}
 					}]
-				}),
+				})
 			},
 			{
 				test: /\.scss$/,
@@ -100,7 +100,7 @@ module.exports = {
 						},
 						'sass-loader'
 					]
-				}),
+				})
 			}
 		]
 	},
