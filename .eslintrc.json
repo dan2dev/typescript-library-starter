@@ -2,6 +2,7 @@
 	"extends": "standard",
 	"rules": {
 		"indent": "off",
-		"no-tabs": "off"
+		"no-tabs": "off",
+		"semi": "off"
 	}
 }
