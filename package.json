@@ -7,7 +7,7 @@
 	"types": "@types/main",
 	"scripts": {
 		"test": "jest",
-		"dev": "npm run clean && (tsc -w | webpack -w --progress --color)",
+		"dev": "npm run clean && (tsc -w | webpack --config=webpack.dev.js -w --progress --color)",
 		"build": "npm run clean && tsc && webpack --config=webpack.dev.js --progress --color && webpack -p --config=webpack.prod.js --progress --color  && exit 0",
 		"clean": "rm -rf ./lib/* ./dist/* ./@types/* && exit 0",
 		"clean-node": "rm -rf ./node_modules && exit 0",
@@ -41,7 +41,7 @@
 	"author": {
 		"name": "Dan C Castro"
 	},
-	"license": "ISC",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/dan2dev/typescript-library-starter/issues"
 	},
@@ -69,6 +69,7 @@
 		"eslint-plugin-standard": "^3.0.1",
 		"extract-text-webpack-plugin": "^3.0.2",
 		"html-webpack-plugin": "^2.30.1",
+		"iisexpress-proxy": "^1.3.0",
 		"jest": "^22.1.4",
 		"node-sass": "^4.7.2",
 		"regenerator-runtime": "^0.11.1",
