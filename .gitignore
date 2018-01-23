@@ -13,6 +13,7 @@
 *.userprefs
 .git
 .vscode
+.vscode/
 
 # Build results
 [Dd]ebug/
