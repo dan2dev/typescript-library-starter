@@ -8,7 +8,7 @@
 	"scripts": {
 		"test": "jest",
 		"dev": "npm run clean && (tsc -w | webpack -w --progress --color)",
-		"build": "npm run clean && tsc && webpack -p --config=webpack.min.config.js --progress --color && webpack --progress --color && exit 0",
+		"build": "npm run clean && tsc && webpack --progress --color && webpack -p --config=webpack.min.config.js --progress --color  && exit 0",
 		"clean": "rm -rf ./lib/* ./dist/* ./@types/* && exit 0",
 		"clean-node": "rm -rf ./node_modules && exit 0",
 		"commit-release": "git commit -a -m \"release\" && git clean -i && git rebase && exit 0",
