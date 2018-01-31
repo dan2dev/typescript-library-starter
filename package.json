@@ -15,12 +15,8 @@
 		"webpack-dev-w": "webpack -w --define process.env.NODE_ENV=development --config=webpack.dev.js --progress --color",
 		"webpack-prod-w": "webpack -w --define process.env.NODE_ENV=production --config=webpack.prod.js --progress --color",
 		"build": "yarn run clean && tsc && yarn run webpack-dev && yarn run webpack-prod && exit 0",
-		"clean": "del /s /q .\\lib\\* && del /s /q .\\dist\\* && del /s /q .\\@types\\* && exit 0",
-		"clean-bash": "rm -rf ./lib/* ./dist/* ./@types/* && exit 0",
-		"clean-node": "del /s /q .\\package-lock.json && rmdir /s /q .\\node_modules && exit 0",
-		"clean-node-bash": "rm -rf ./node_modules && rm -rf package-lock.json exit 0",
-		"commit": "git add --all && git commit -a -m \"release\" && exit 0",
-		"deploy": "git clean -i && npm version patch && npm publish && exit 0"
+		"clean": "rimraf lib/* dist/* @types/* && exit 0",
+		"clean-node": "rimraf package-lock.json node_modules/* && exit 0"
 	},
 	"babel": {
 		"presets": [
@@ -79,6 +75,7 @@
 		"node-sass": "^4.7.2",
 		"optimize-css-assets-webpack-plugin": "^3.2.0",
 		"regenerator-runtime": "^0.11.1",
+		"rimraf": "^2.6.2",
 		"sass-loader": "^6.0.6",
 		"source-map-loader": "^0.2.3",
 		"style-loader": "^0.20.1",
