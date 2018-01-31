@@ -1,6 +1,6 @@
 import "./styles.scss";
 
-export namespace ViewIntent {
+export namespace TsStarter {
 
 }
-export default ViewIntent;
+export default TsStarter;
