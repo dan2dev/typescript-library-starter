@@ -1,3 +1,4 @@
-export declare namespace TypescriptLibraryStarter {
+import "./styles.scss";
+export declare namespace ViewIntent {
 }
-export default TypescriptLibraryStarter;
+export default ViewIntent;
